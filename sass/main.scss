@@ -1,0 +1,15 @@
+@import './base/normalize';
+@import './utils/variables';
+@import './utils/func';
+@import './utils/mixin';
+@import './utils/placeholder';
+@import './components/wrapper';
+@import './components/header/main';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  color: getColor(boulder);
+
+  background-color: getColor(white);
+}

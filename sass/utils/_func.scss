@@ -1,0 +1,11 @@
+@function getBreakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@function getColor($key, $alpha: 1) {
+  @return rgba(map-get($colors, $key), $alpha);
+}
+
+@function spacing($scale) {
+  @return calc($base-spacing * $scale);
+}

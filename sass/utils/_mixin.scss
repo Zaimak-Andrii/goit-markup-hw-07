@@ -1,0 +1,22 @@
+@mixin breakpoint($point, $type: min) {
+  $pixels: getBreakpoint(#{$point});
+
+  @if $type == max {
+    $pixels: calc($pixels - 1px);
+  }
+
+  @media screen and (#{$type + -width}: $pixels) {
+    @content;
+  }
+}
+
+/*
+* Set font size and line height in multyplier.
+*
+* $fs - font size without pixels
+* $lh - line height without pixels
+*/
+@mixin setFont($fs, $lh) {
+  font-size: $fs + px;
+  line-height: calc($lh / $fs);
+}

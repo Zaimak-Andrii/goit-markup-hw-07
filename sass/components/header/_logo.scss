@@ -1,0 +1,18 @@
+.logo {
+  @extend %link;
+  font-family: 'Raleway';
+  font-weight: 700;
+  @include setFont(24, 28);
+  color: getColor(dodger-blue);
+
+  &--black {
+    color: getColor(black);
+  }
+  &--white {
+    color: getColor(white);
+  }
+
+  @include breakpoint(desktop) {
+    @include setFont(26, 31);
+  }
+}

@@ -1,0 +1,18 @@
+%link {
+  text-decoration: none;
+}
+
+%list {
+  list-style: none;
+}
+
+%font-h1 {
+  font-weight: 900;
+  @include setFont(26, 42);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @include breakpoint(desktop) {
+    @include setFont(44, 60);
+  }
+}
