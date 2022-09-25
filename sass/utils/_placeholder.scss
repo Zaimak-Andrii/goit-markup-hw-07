@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+%title {
+  margin: 0;
+}
+
 %font-h1 {
   font-weight: 900;
   @include setFont(26, 42);
@@ -15,4 +19,7 @@
   @include breakpoint(desktop) {
     @include setFont(44, 60);
   }
+}
+
+%section {
 }

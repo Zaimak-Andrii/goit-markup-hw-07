@@ -4,7 +4,9 @@
 @import './utils/mixin';
 @import './utils/placeholder';
 @import './components/wrapper';
+@import './components/button';
 @import './components/header/main';
+@import './components/main/main';
 
 body {
   font-family: 'Roboto', sans-serif;

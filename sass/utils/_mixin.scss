@@ -20,3 +20,24 @@
   font-size: $fs + px;
   line-height: calc($lh / $fs);
 }
+
+@mixin setBackground($url) {
+  $bg-gradient-overlay: linear-gradient(to bottom, getColor(tuna, 0.4), getColor(tuna, 0.4));
+
+  background-image: $bg-gradient-overlay, url($url + '.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: $bg-gradient-overlay, url($url + '@2x.jpg');
+  }
+}
+
+@mixin setTransition($args...) {
+  $transitions: ();
+  @each $arg in $args {
+    $transitions: append($transitions, $arg $animation-duration $animation-function, comma);
+  }
+  transition: $transitions;
+}

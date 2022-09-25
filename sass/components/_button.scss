@@ -1,0 +1,42 @@
+.button {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 4px;
+
+  &--primary {
+    min-width: 200px;
+    padding-top: spacing(1);
+    padding-bottom: spacing(1);
+
+    font-weight: 700;
+    @include setFont(16, 30);
+    letter-spacing: 0.06em;
+    color: getColor(white);
+
+    background: getColor(dodger-blue);
+    box-shadow: 0px 4px 4px getColor(black, 0.15);
+  }
+
+  &--secondary {
+    min-width: 73px;
+    padding: spacing(0.6) spacing(2.2);
+
+    font-weight: 500;
+    @include setFont(16, 26);
+    color: getColor(mine-shaft);
+
+    background: getColor(whisper);
+
+    @include setTransition(color, background, box-shadow);
+
+    &:hover,
+    &:focus {
+      color: getColor(white);
+
+      background: getColor(dodger-blue);
+      box-shadow: 0px 3px 1px getColor(black, 0.1), 0px 1px 2px getColor(black, 0.08),
+        0px 2px 2px getColor(black, 0.12);
+    }
+  }
+}
