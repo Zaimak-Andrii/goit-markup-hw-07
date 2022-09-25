@@ -3,23 +3,22 @@
 }
 
 %list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 %title {
   margin: 0;
+  padding: 0;
 }
 
-%font-h1 {
-  font-weight: 900;
-  @include setFont(26, 42);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  @include breakpoint(desktop) {
-    @include setFont(44, 60);
-  }
+%paragraph {
+  margin: 0;
 }
 
-%section {
+%icon {
+  display: block;
+  fill: currentColor;
 }

@@ -1,0 +1,26 @@
+.section {
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
+
+  @include breakpoint(desktop) {
+    padding-top: spacing(9.4);
+    padding-bottom: spacing(9.4);
+  }
+}
+
+.section__title {
+  @extend %title;
+
+  margin-bottom: spacing(3);
+
+  font-weight: 700;
+  @include setFont(28, 33);
+  text-align: center;
+  color: getColor(mine-shaft);
+
+  @include breakpoint(desktop) {
+    margin-bottom: spacing(5);
+
+    @include setFont(33, 42);
+  }
+}
