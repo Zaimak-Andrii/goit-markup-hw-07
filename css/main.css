@@ -260,22 +260,22 @@ summary {
   text-decoration: none;
 }
 
-.features__list {
+.clients__list, .team__list, .directions__list, .features__list, .socials {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.features__subtitle, .hero__title, .section__title {
+.team__subtitle, .features__subtitle, .hero__title, .section__title {
   margin: 0;
   padding: 0;
 }
 
-.features__text {
+.team__description, .directions__subtitle, .features__text {
   margin: 0;
 }
 
-.features__icon {
+.clients__icon, .features__icon, .socials__icon {
   display: block;
   fill: currentColor;
 }
@@ -358,6 +358,61 @@ summary {
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+}
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials__link:hover, .socials__link:focus {
+  color: white;
+}
+.socials__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #2196f3;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials__link:hover::before, .socials__link:focus::before {
+  opacity: 1;
+}
+.socials__link--white {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  z-index: 0;
+}
+
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -460,6 +515,19 @@ summary {
   }
 }
 
+.features__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
   .features__list {
     display: flex;
@@ -476,18 +544,18 @@ summary {
   .features__item {
     flex-basis: calc((100% - 30px) / 2);
   }
-  .features__item:not(:nth-child(2n)) {
-    margin-right: 30px;
-  }
   .features__item:nth-child(n+3) {
     margin-top: 30px;
+  }
+  .features__item:not(:nth-child(2n)) {
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
     flex-basis: calc((100% - 90px) / 4);
   }
-  .features__item:not(:last-child) {
+  .features__item:not(:nth-child(4n)) {
     margin-right: 30px;
   }
 }
@@ -525,6 +593,193 @@ summary {
 .features__text {
   font-size: 14px;
   line-height: 1.7142857143;
+}
+
+@media screen and (max-width: 1199px) {
+  .directions {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.directions__list {
+  display: flex;
+}
+
+.directions__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.directions__thumb {
+  position: relative;
+}
+
+.directions__image {
+  display: block;
+}
+
+.directions__subtitle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team__item {
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 479px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .team__item:nth-child(n+3) {
+    margin-top: 30px;
+  }
+  .team__item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .team__item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+}
+
+.team__image {
+  display: block;
+  width: 100%;
+}
+
+.team__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__content {
+    padding-bottom: 30px;
+  }
+}
+
+.team__subtitle {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  color: #212121;
+}
+
+.team__description {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.1875;
+  color: #757575;
+}
+
+.clients {
+  background-color: white;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients__item {
+  height: 92px;
+  color: #afb1b8;
+}
+@media screen and (max-width: 479px) {
+  .clients__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .clients__item:nth-child(n+3) {
+    margin-top: 30px;
+  }
+  .clients__item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .clients__item:nth-child(n+4) {
+    margin-top: 30px;
+  }
+  .clients__item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+  .clients__item:not(:nth-child(6n)) {
+    margin-right: 30px;
+  }
+}
+
+.clients__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients__link:hover, .clients__link:focus {
+  color: #2196f3;
+  border-color: #2196f3;
+}
+
+.clients__icon {
+  margin: 0 auto;
+  width: 106px;
+  height: 60px;
 }
 
 body {

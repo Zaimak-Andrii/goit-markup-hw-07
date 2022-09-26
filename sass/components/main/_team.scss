@@ -1,0 +1,68 @@
+.team {
+  background-color: getColor(whisper);
+}
+
+.team__list {
+  @extend %list;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team__item {
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+
+  background-color: getColor(white);
+  box-shadow: 0px 1px 3px getColor(black, 0.12), 0px 1px 1px getColor(black, 0.14),
+    0px 2px 1px getColor(black, 0.2);
+
+  @include breakpoint(false, mobile) {
+    &:not(:last-child) {
+      margin-bottom: spacing(3);
+    }
+  }
+
+  @include breakpoint(tablet, desktop) {
+    @include setFlexBasisAndGap(2, spacing(3), spacing(3));
+  }
+
+  @include breakpoint(desktop) {
+    @include setFlexBasisAndGap(4, spacing(3));
+  }
+}
+
+.team__image {
+  display: block;
+  width: 100%;
+}
+
+.team__content {
+  padding-top: spacing(3);
+  padding-bottom: spacing(2.4);
+  padding-left: spacing(3);
+  padding-right: spacing(3);
+
+  @include breakpoint(desktop) {
+    padding-bottom: spacing(3);
+  }
+}
+
+.team__subtitle {
+  @extend %title;
+  margin-bottom: spacing(1);
+
+  font-weight: 500;
+  @include setFont(16, 19);
+  color: getColor(mine-shaft);
+}
+
+.team__description {
+  @extend %paragraph;
+  margin-bottom: spacing(1.6);
+
+  @include setFont(16, 19);
+  color: getColor(boulder);
+}

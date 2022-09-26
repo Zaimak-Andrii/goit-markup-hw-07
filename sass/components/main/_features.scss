@@ -4,6 +4,10 @@
   }
 }
 
+.features__title {
+  @include visibilityHidden();
+}
+
 .features__list {
   @extend %list;
 
@@ -21,23 +25,11 @@
   }
 
   @include breakpoint(tablet, desktop) {
-    flex-basis: calc((100% - 30px) / 2);
-
-    &:not(:nth-child(2n)) {
-      margin-right: spacing(3);
-    }
-
-    &:nth-child(n + 3) {
-      margin-top: spacing(3);
-    }
+    @include setFlexBasisAndGap(2, spacing(3), spacing(3));
   }
 
   @include breakpoint(desktop) {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-
-    &:not(:last-child) {
-      margin-right: spacing(3);
-    }
+    @include setFlexBasisAndGap(4, spacing(3));
   }
 }
 

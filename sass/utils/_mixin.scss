@@ -1,3 +1,17 @@
+@mixin visibilityHidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @mixin breakpoint($from, $to: false) {
   @if not $to {
     @media screen and (min-width: getBreakpoint(#{$from})) {
@@ -44,4 +58,18 @@
     $transitions: append($transitions, $arg $animation-duration $animation-function, comma);
   }
   transition: $transitions;
+}
+
+@mixin setFlexBasisAndGap($col, $colGap, $rowGap: false) {
+  flex-basis: calc((100% - ($col - 1) * $colGap) / $col);
+
+  @if $rowGap {
+    &:nth-child(n + #{$col + 1}) {
+      margin-top: spacing(3);
+    }
+  }
+
+  &:not(:nth-child(#{$col + n})) {
+    margin-right: $colGap;
+  }
 }
