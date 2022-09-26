@@ -14,26 +14,30 @@
 }
 
 .features__item {
-  @include breakpoint(mobile, max) {
+  @include breakpoint(false, mobile) {
     &:not(:nth-child(1)) {
       margin-top: spacing(3);
     }
   }
 
-  @include breakpoint(tablet) {
-    width: calc((100% - 30px) / 2);
+  @include breakpoint(tablet, desktop) {
+    flex-basis: calc((100% - 30px) / 2);
 
     &:not(:nth-child(2n)) {
       margin-right: spacing(3);
     }
 
-    // &:nth-child(n + 3) {
-    //   margin-top: spacing(3);
-    // }
+    &:nth-child(n + 3) {
+      margin-top: spacing(3);
+    }
   }
 
   @include breakpoint(desktop) {
-    width: calc((100% - 3 * 30px) / 4);
+    flex-basis: calc((100% - 3 * 30px) / 4);
+
+    &:not(:last-child) {
+      margin-right: spacing(3);
+    }
   }
 }
 
@@ -67,7 +71,7 @@
 
   color: getColor(mine-shaft);
 
-  @include breakpoint(mobile, max) {
+  @include breakpoint(false, mobile) {
     text-align: center;
   }
 }

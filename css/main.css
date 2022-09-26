@@ -266,7 +266,7 @@ summary {
   list-style: none;
 }
 
-.features__subtitle, .solutions__title, .section__title {
+.features__subtitle, .hero__title, .section__title {
   margin: 0;
   padding: 0;
 }
@@ -387,49 +387,49 @@ summary {
   }
 }
 
-.solutions {
+.hero {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
   height: 400px;
   text-align: center;
   background-color: #c4c4c4;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-mobile.jpg");
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .solutions {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-mobile@2x.jpg");
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-mobile@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
-  .solutions {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-tablet.jpg");
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-tablet.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .solutions {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-tablet@2x.jpg");
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-tablet@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
-  .solutions {
+  .hero {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-desktop.jpg");
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-desktop.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .solutions {
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../images/bg-solutions-desktop@2x.jpg");
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-solutions-desktop@2x.jpg");
   }
 }
 
-.solutions__title {
+.hero__title {
   font-weight: 900;
   font-size: 26px;
   line-height: 1.6153846154;
@@ -438,17 +438,17 @@ summary {
   color: white;
 }
 @media screen and (min-width: 1200px) {
-  .solutions__title {
+  .hero__title {
     font-size: 44px;
     line-height: 1.3636363636;
   }
 }
 
-.solutions__button {
+.hero__button {
   margin-top: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .solutions__button {
+  .hero__button {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -472,17 +472,23 @@ summary {
     margin-top: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .features__item {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
   .features__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
+  .features__item:nth-child(n+3) {
+    margin-top: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
-    width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .features__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 

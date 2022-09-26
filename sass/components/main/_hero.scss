@@ -1,4 +1,4 @@
-.solutions {
+.hero {
   margin: 0 auto;
   padding-top: spacing(11.8);
   padding-bottom: spacing(11.8);
@@ -7,13 +7,13 @@
   text-align: center;
 
   background-color: getColor(silver);
-  @include setBackground('../../../images/bg-solutions-mobile');
+  @include setBackground('../images/bg-solutions-mobile');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @include breakpoint(tablet) {
-    @include setBackground('../../../images/bg-solutions-tablet');
+    @include setBackground('../images/bg-solutions-tablet');
   }
 
   @include breakpoint(desktop) {
@@ -22,11 +22,11 @@
     max-width: 1600px;
     height: 600px;
 
-    @include setBackground('../../../images/bg-solutions-desktop');
+    @include setBackground('../images/bg-solutions-desktop');
   }
 }
 
-.solutions__title {
+.hero__title {
   @extend %title;
 
   font-weight: 900;
@@ -40,7 +40,7 @@
   }
 }
 
-.solutions__button {
+.hero__button {
   margin-top: 30px;
 
   @include breakpoint(desktop) {

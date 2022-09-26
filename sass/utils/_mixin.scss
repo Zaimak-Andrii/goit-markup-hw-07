@@ -1,12 +1,16 @@
-@mixin breakpoint($point, $type: min) {
-  $pixels: getBreakpoint(#{$point});
-
-  @if $type == max {
-    $pixels: calc($pixels - 1px);
-  }
-
-  @media screen and (#{$type + -width}: $pixels) {
-    @content;
+@mixin breakpoint($from, $to: false) {
+  @if not $to {
+    @media screen and (min-width: getBreakpoint(#{$from})) {
+      @content;
+    }
+  } @else if not $from {
+    @media screen and (max-width: calc(getBreakpoint(#{$to}) - 1px)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: getBreakpoint(#{$from})) and (max-width: calc(getBreakpoint(#{$to}) - 1px)) {
+      @content;
+    }
   }
 }
 
