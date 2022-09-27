@@ -15,9 +15,7 @@
   @include breakpoint(tablet) {
     display: flex;
     flex-wrap: wrap;
-  }
-  @include breakpoint(desktop) {
-    justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -31,13 +29,12 @@
   text-transform: uppercase;
 }
 
-//================================================Navigation==================================
+//==============================================Navigation===================================
 .page-footer__nav {
-  @include breakpoint(tablet) {
+  @include breakpoint(tablet, desktop) {
     flex-grow: 1;
   }
 }
-
 .page-footer__contacts {
   margin-top: spacing(2);
 
@@ -49,19 +46,15 @@
     margin-top: spacing(6);
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(tablet, desktop) {
     flex-grow: 1;
-
-    margin-top: spacing(0.5);
   }
 
   @include breakpoint(desktop) {
-    margin-top: spacing(1.2);
-    text-align: left;
+    margin-left: spacing(7);
   }
 }
-
-//=====================================================Subscription==========================================
+//==============================================Subscription=================================
 .subscription__container {
   @include breakpoint(desktop) {
     display: flex;
@@ -75,15 +68,16 @@
   }
 
   @include breakpoint(tablet, desktop) {
-    flex-grow: 1;
+    flex-grow: 2;
   }
-
   @include breakpoint(desktop) {
-    margin-top: spacing(1.2);
+    margin-left: auto;
   }
 }
 
 .subscription__input {
+  @extend %input;
+
   padding: spacing(1.5) spacing(1.6);
 
   min-width: 358px;
@@ -97,9 +91,15 @@
   border-radius: 4px;
   border: 1px solid getColor(white, 0.3);
 
+  @include setTransition(border-color);
+
   &::placeholder {
     @include setFont(16, 20);
     color: rgba(white, 0.6);
+  }
+
+  &:focus {
+    border-color: getColor(dodger-blue);
   }
 
   @include breakpoint(false, desktop) {
