@@ -1,4 +1,6 @@
 %link {
+  display: inline-block;
+
   text-decoration: none;
   color: inherit;
 }
@@ -26,4 +28,10 @@
 
 %input {
   outline: none;
+}
+
+%button {
+  cursor: pointer;
+
+  border: none;
 }

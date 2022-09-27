@@ -70,6 +70,7 @@
   @include breakpoint(tablet, desktop) {
     flex-grow: 2;
   }
+
   @include breakpoint(desktop) {
     margin-left: auto;
   }
@@ -80,7 +81,6 @@
 
   padding: spacing(1.5) spacing(1.6);
 
-  min-width: 358px;
   max-width: 450px;
   width: 100%;
 
@@ -105,13 +105,17 @@
   @include breakpoint(false, desktop) {
     margin-bottom: spacing(2);
   }
+  @include breakpoint(tablet) {
+    min-width: 358px;
+  }
 }
-
+//==============================================Button=======================================
 .page-footer__button {
   @include breakpoint(false, desktop) {
     margin-left: auto;
     margin-right: auto;
   }
+
   @include breakpoint(desktop) {
     margin-left: spacing(1.2);
   }

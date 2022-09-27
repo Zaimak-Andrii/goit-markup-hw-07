@@ -1,5 +1,5 @@
 .button {
-  cursor: pointer;
+  @extend %button;
 
   display: flex;
   align-items: center;
@@ -7,7 +7,6 @@
 
   text-transform: capitalize;
 
-  border: none;
   border-radius: 4px;
 
   &--primary {

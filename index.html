@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div class="wrapper">
-        <nav class="page-nav">
+    <header class="header">
+      <div class="wrapper header__wrapper">
+        <nav class="header__nav">
           <a class="logo" href="./index.html" lang="en"
             >Web<span class="logo--black">Studio</span></a
           >
@@ -32,30 +32,33 @@
           </ul>
         </nav>
 
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon" width="16" height="12">
+        <ul class="header__contacts">
+          <li class="header__contacts-item">
+            <a href="mailto:info@devstudio.com" class="header__contacts-link">
+              <svg class="header__contacts-icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon" width="10" height="16">
+          <li class="hedaer__contacts-item">
+            <a href="tel:+380961111111" class="header__contacts-link">
+              <svg class="header__contacts-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-phone-book"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
-      </div>
-      <div>
-        <button>
-          <svg width="40" height="40">
-            <use class="icon-open" href="./images/icons.svg#icon-menu"></use>
-            <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
@@ -802,6 +805,21 @@
           </div>
         </form>
       </div>
+    </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul>
     </div>
 
     <script
