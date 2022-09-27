@@ -42,6 +42,8 @@
 
 .hero__button {
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include breakpoint(desktop) {
     padding-left: spacing(3.2);

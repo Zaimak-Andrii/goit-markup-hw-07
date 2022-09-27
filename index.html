@@ -34,16 +34,16 @@
 
         <ul class="contacts">
           <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__email">
-              <svg class="icon" width="16" height="12">
+            <a href="mailto:info@devstudio.com" class="contacts__link">
+              <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="contacts__item">
-            <a href="tel:+380961111111" class="contacts__phone">
-              <svg class="icon" width="10" height="16">
+            <a href="tel:+380961111111" class="contacts__link">
+              <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-phone-book"></use>
               </svg>
               +38 096 111 11 11
@@ -634,36 +634,40 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="wrapper">
-        <div>
+      <div class="wrapper page-footer__wrapper">
+        <div class="page-footer__nav">
           <a href="./index.html" class="logo" lang="en"
             >Web<span class="logo--white">Studio</span></a
           >
-          <address class="site-contacts">
-            <ul class="list contacts-list">
-              <li class="item">
+          <address class="page-footer__contacts">
+            <ul class="contacts">
+              <li class="contacts__item">
                 <a
                   href="https://goo.gl/maps/qrpCz5nqf4nP3WyB6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="link item-address"
+                  class="contacts__link"
                 >
                   м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="item">
-                <a href="mailto:info@devstudio.com" class="link item-email grey"
+              <li class="contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts__link contacts__link--transparent"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="item">
-                <a href="tel:+380961111111" class="link item-phone grey">+38 096 111 11 11</a>
+              <li class="contacts__item">
+                <a href="tel:+380961111111" class="contacts__link contacts__link--transparent"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
-        <div class="socials">
-          <h3 class="title">приєднуйтесь</h3>
+        <div class="page-footer__socials">
+          <h3 class="page-footer__title">приєднуйтесь</h3>
           <ul class="socials">
             <li class="socials__item">
               <a
@@ -715,15 +719,15 @@
             </li>
           </ul>
         </div>
-        <form class="subscription">
-          <h3 class="title">Підпишіться на розсилку</h3>
-          <div class="subscription-container">
-            <label class="email-label">
-              <input class="email-input" type="email" name="email" placeholder="Email" />
+        <form class="subscription page-footer__subscription">
+          <h3 class="subscription__title page-footer__title">Підпишіться на розсилку</h3>
+          <div class="subscription__container">
+            <label class="subscription__label">
+              <input class="subscription__input" type="email" name="email" placeholder="E-mail" />
             </label>
-            <button type="button" class="button">
+            <button type="button" class="page-footer__button button button--primary">
               Підписатися
-              <svg class="icon">
+              <svg class="button__icon button__icon--append">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>

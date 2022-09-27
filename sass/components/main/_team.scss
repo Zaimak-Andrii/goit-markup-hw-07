@@ -42,8 +42,8 @@
 .team__content {
   padding-top: spacing(3);
   padding-bottom: spacing(2.4);
-  padding-left: spacing(3);
-  padding-right: spacing(3);
+  padding-left: spacing(3.2);
+  padding-right: spacing(3.2);
 
   @include breakpoint(desktop) {
     padding-bottom: spacing(3);

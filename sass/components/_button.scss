@@ -1,6 +1,10 @@
 .button {
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   text-transform: capitalize;
 
   border: none;
@@ -41,7 +45,13 @@
         0px 2px 2px getColor(black, 0.12);
     }
   }
+}
 
-  &--icon-append {
+.button__icon {
+  width: 24px;
+  height: 24px;
+
+  &--append {
+    margin-left: spacing(1.2);
   }
 }

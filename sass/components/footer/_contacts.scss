@@ -1,0 +1,30 @@
+.contacts {
+  @extend %list;
+}
+
+.contacts__item {
+  &:not(:first-child) {
+    margin-top: spacing(0.8);
+  }
+}
+
+.contacts__link {
+  @extend %link;
+
+  @include setFont(14, 24);
+
+  @include setTransition(color);
+
+  &:hover,
+  &:focus {
+    color: getColor(dodger-blue);
+  }
+
+  &--transparent {
+    color: getColor(white, 0.6);
+  }
+}
+
+.contacts__icon {
+  @extend %icon;
+}

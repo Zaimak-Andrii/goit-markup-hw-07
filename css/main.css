@@ -256,17 +256,18 @@ summary {
 * $fs - font size without pixels
 * $lh - line height without pixels
 */
-.logo {
+.contacts__link, .logo {
   text-decoration: none;
+  color: inherit;
 }
 
-.clients__list, .team__list, .directions__list, .features__list, .socials {
+.contacts, .clients__list, .team__list, .directions__list, .features__list, .socials {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.team__subtitle, .features__subtitle, .hero__title, .section__title {
+.page-footer__title, .team__subtitle, .features__subtitle, .hero__title, .section__title {
   margin: 0;
   padding: 0;
 }
@@ -275,7 +276,7 @@ summary {
   margin: 0;
 }
 
-.clients__icon, .features__icon, .socials__icon {
+.contacts__icon, .clients__icon, .features__icon, .socials__icon {
   display: block;
   fill: currentColor;
 }
@@ -327,6 +328,9 @@ summary {
 
 .button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: capitalize;
   border: none;
   border-radius: 4px;
@@ -358,9 +362,18 @@ summary {
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.button__icon {
+  width: 24px;
+  height: 24px;
+}
+.button__icon--append {
+  margin-left: 12px;
+}
+
 .socials {
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .socials__item {
@@ -423,7 +436,7 @@ summary {
 }
 
 .logo {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.1666666667;
@@ -501,6 +514,8 @@ summary {
 
 .hero__button {
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 1200px) {
   .hero__button {
@@ -692,8 +707,8 @@ summary {
 .team__content {
   padding-top: 30px;
   padding-bottom: 24px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 @media screen and (min-width: 1200px) {
   .team__content {
@@ -782,22 +797,144 @@ summary {
   height: 60px;
 }
 
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+  background-color: #2f303a;
+}
+@media screen and (max-width: 1199px) {
+  .page-footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__wrapper {
+    justify-content: space-between;
+  }
+}
+
+.page-footer__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__nav {
+    flex-grow: 1;
+  }
+}
+
+.page-footer__contacts {
+  margin-top: 20px;
+  font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .page-footer__socials {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-footer__socials {
+    flex-grow: 1;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__socials {
+    margin-top: 12px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page-footer__subscription {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__subscription {
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__subscription {
+    margin-top: 12px;
+  }
+}
+
+.subscription__input {
+  padding: 15px 16px;
+  min-width: 358px;
+  max-width: 450px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.subscription__input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width: 1199px) {
+  .subscription__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page-footer__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__button {
+    margin-left: 12px;
+  }
+}
+
+.contacts__item:not(:first-child) {
+  margin-top: 8px;
+}
+
+.contacts__link {
+  font-size: 14px;
+  line-height: 1.7142857143;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: #2196f3;
+}
+.contacts__link--transparent {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   color: #757575;
   background-color: white;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
