@@ -535,7 +535,7 @@ summary {
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .features__item:not(:nth-child(1)) {
     margin-top: 30px;
   }
@@ -584,7 +584,7 @@ summary {
   text-transform: uppercase;
   color: #212121;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .features__subtitle {
     text-align: center;
   }
@@ -659,7 +659,7 @@ summary {
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -729,7 +729,7 @@ summary {
   height: 92px;
   color: #afb1b8;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .clients__item {
     flex-basis: calc((100% - 30px) / 2);
   }

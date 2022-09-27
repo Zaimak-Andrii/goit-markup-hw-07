@@ -14,7 +14,7 @@
 
   color: getColor(bombay);
 
-  @include breakpoint(false, mobile) {
+  @include breakpoint(false, tablet) {
     @include setFlexBasisAndGap(2, spacing(3), spacing(3));
   }
 

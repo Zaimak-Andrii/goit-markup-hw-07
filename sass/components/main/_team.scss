@@ -19,7 +19,7 @@
   box-shadow: 0px 1px 3px getColor(black, 0.12), 0px 1px 1px getColor(black, 0.14),
     0px 2px 1px getColor(black, 0.2);
 
-  @include breakpoint(false, mobile) {
+  @include breakpoint(false, tablet) {
     &:not(:last-child) {
       margin-bottom: spacing(3);
     }

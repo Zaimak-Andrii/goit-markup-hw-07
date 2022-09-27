@@ -18,7 +18,7 @@
 }
 
 .features__item {
-  @include breakpoint(false, mobile) {
+  @include breakpoint(false, tablet) {
     &:not(:nth-child(1)) {
       margin-top: spacing(3);
     }
@@ -63,7 +63,7 @@
 
   color: getColor(mine-shaft);
 
-  @include breakpoint(false, mobile) {
+  @include breakpoint(false, tablet) {
     text-align: center;
   }
 }
