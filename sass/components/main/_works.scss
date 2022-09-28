@@ -1,0 +1,250 @@
+.works {
+}
+
+.works__title {
+  @include visibilityHidden();
+}
+
+// ========================================Filter===================================
+.works__filter-list {
+  @extend %list;
+
+  display: flex;
+
+  @include breakpoint(false, tablet) {
+    flex-wrap: wrap;
+    row-gap: spacing(1.5);
+
+    margin-bottom: spacing(4);
+  }
+
+  @include breakpoint(tablet) {
+    justify-content: center;
+
+    margin-bottom: spacing(3);
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: spacing(5);
+  }
+}
+
+.works__filter-item {
+  &:not(:last-child) {
+    margin-right: spacing(0.8);
+  }
+}
+// ========================================List=====================================
+.works__list {
+  @extend %list;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.works__item {
+  @include breakpoint(false, tablet) {
+    &:not(:last-child) {
+      margin-bottom: spacing(3);
+    }
+  }
+
+  @include breakpoint(tablet, desktop) {
+    @include setFlexBasisAndGap(2, spacing(3), spacing(3));
+  }
+
+  @include breakpoint(desktop) {
+    @include setFlexBasisAndGap(3, spacing(3), spacing(3));
+  }
+}
+
+.works__link {
+  @extend %link;
+
+  @include setTransition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    & .works__container {
+      transform: translateY(0);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+}
+// Image
+.works__thumb {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.works__image {
+  @extend %image;
+}
+
+// Description
+.works__container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: getColor(dodger-blue, 0.9);
+
+  transform: translateY(100%);
+  @include setTransition(transform);
+}
+
+.works__description {
+  @extend %paragraph;
+
+  padding: spacing(2.4);
+
+  @include setFont(18, 28);
+  color: getColor(white);
+}
+
+// Info
+.works__content {
+  $border: 1px solid getColor(gallery);
+
+  padding: spacing(2) spacing(2.4);
+
+  border-bottom: $border;
+  border-left: $border;
+  border-right: $border;
+
+  @include breakpoint(tablet) {
+    flex: 1 0 auto;
+  }
+}
+
+.works__subtitle {
+  @extend %title;
+
+  font-weight: 700;
+  @include setFont(18, 36);
+  letter-spacing: 0.06em;
+
+  color: getColor(mine-shaft);
+}
+
+.works__label {
+  @extend %paragraph;
+
+  @include setFont(16, 30);
+}
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.our-work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.our-work-list > .item {
+  width: calc((100% - 2 * 30px) / 3);
+
+  background-color: var(--white-color);
+}
+
+.our-work-list .content {
+  --border: 1px solid #eeeeee;
+
+  padding: 20px 24px;
+  border-bottom: getColor(gallery);
+  border-left: getColor(gallery);
+  border-right: getColor(gallery);
+}
+
+.our-work-list .our-work-link {
+  display: block;
+
+  transition: box-shadow var(--animation-duration) var(--animation-function);
+}
+
+.our-work-list .our-work-link:hover,
+.our-work-list .our-work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.our-work-list > .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.our-work-list > .item:nth-child(n + 4) {
+  margin-top: 30px;
+}
+
+.our-work-list .thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-work-list .text-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--animation-duration) var(--animation-function);
+}
+
+.our-work-list .text {
+  padding: 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white-color);
+}
+
+.our-work-list .our-work-link:hover .text-container,
+.our-work-list .our-work-link:focus .text-container {
+  transform: translateY(0);
+}
+
+.our-work-list .image {
+  display: block;
+}
+
+.our-work-list .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--title-text-color);
+}
+
+.our-work-list .description {
+  margin-top: 4px;
+
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--primary-text-color);
+}

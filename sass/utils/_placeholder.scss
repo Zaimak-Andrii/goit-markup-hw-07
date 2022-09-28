@@ -23,7 +23,15 @@
 
 %icon {
   display: block;
+
   fill: currentColor;
+}
+
+%image {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
 }
 
 %input {
@@ -32,6 +40,8 @@
 
 %button {
   cursor: pointer;
+
+  padding: 0;
 
   border: none;
 }

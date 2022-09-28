@@ -67,235 +67,728 @@
     </header>
     <main>
       <!-- Our woks -->
-      <section class="section">
-        <div class="container">
-          <h1 class="visually-hidden">Наші роботи</h1>
-          <ul class="list work-list-filter">
-            <li class="item">
-              <button type="button" class="button">Усі</button>
+      <section class="section works">
+        <div class="wrapper">
+          <h1 class="section__title works__title">Наші роботи</h1>
+
+          <ul class="works__filter-list">
+            <li class="works__filter-item">
+              <button type="button" class="button button--secondary">Усі</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Веб-сайти</button>
+            <li class="works__filter-item">
+              <button type="button" class="button button--secondary">Веб-сайти</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Додатки</button>
+            <li class="works__filter-item">
+              <button type="button" class="button button--secondary">Додатки</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Дизайн</button>
+            <li class="works__filter-item">
+              <button type="button" class="button button--secondary">Дизайн</button>
             </li>
-            <li class="item">
-              <button type="button" class="button">Маркетинг</button>
+            <li class="works__filter-item">
+              <button type="button" class="button button--secondary">Маркетинг</button>
             </li>
           </ul>
-          <ul class="list our-work-list">
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/notebook.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
-                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
-                      приватну особу.
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <h2 class="title">Технокряк</h2>
-                  <p class="description">Веб-сайт</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/basketball.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
-                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
-                      приватну особу.
-                    </p>
-                  </div>
-                </div>
-                <div class="content">
-                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                  <p class="description">Дизайн</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/fish.jpg"
-                    alt="Seafood"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
-                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
-                      приватну особу.
-                    </p>
-                  </div>
-                </div>
 
-                <div class="content">
-                  <h2 class="title">Ресторан Seafood</h2>
-                  <p class="description">Додаток</p>
-                </div>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/headphones.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
+          <ul class="works__list">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-mobile.webp    1x,
+                        ./images/tekhnokryak-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-mobile.jpg    1x,
+                        ./images/tekhnokryak-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-desktop.webp    1x,
+                        ./images/tekhnokryak-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-desktop.jpg    1x,
+                        ./images/tekhnokryak-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-tablet.webp    1x,
+                        ./images/tekhnokryak-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/tekhnokryak-tablet.jpg    1x,
+                        ./images/tekhnokryak-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/tekhnokryak-mobile@2x.jpg"
+                      alt="Веб-сайт"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Проєкт Prime</h2>
-                  <p class="description">Маркетинг</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Технокряк</h2>
+                  <p class="works__label">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/boxes.jpg"
-                    alt="Дві скриньки"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-mobile.webp    1x,
+                        ./images/poster-new-orlean-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-mobile.jpg    1x,
+                        ./images/poster-new-orlean-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-desktop.webp    1x,
+                        ./images/poster-new-orlean-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-desktop.jpg    1x,
+                        ./images/poster-new-orlean-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-tablet.webp    1x,
+                        ./images/poster-new-orlean-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/poster-new-orlean-tablet.jpg    1x,
+                        ./images/poster-new-orlean-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/poster-new-orlean-mobile@2x.jpg"
+                      alt="Дизайн"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Проєкт Boxes</h2>
-                  <p class="description">Додаток</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Постер New Orlean vs Golden Star</h2>
+                  <p class="works__label">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/desktop-pc.jpg"
-                    alt="Компьютер"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-mobile.webp    1x,
+                        ./images/restaurant-seafood-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-mobile.jpg    1x,
+                        ./images/restaurant-seafood-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-desktop.webp    1x,
+                        ./images/restaurant-seafood-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-desktop.jpg    1x,
+                        ./images/restaurant-seafood-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-tablet.webp    1x,
+                        ./images/restaurant-seafood-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-tablet.jpg    1x,
+                        ./images/restaurant-seafood-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/restaurant-seafood-mobile@2x.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Inspiration has no Borders</h2>
-                  <p class="description">Веб-сайт</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Ресторан Seafood</h2>
+                  <p class="works__label">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img class="image" src="./images/book.jpg" alt="Книга" width="370" height="294" />
-                  <div class="text-container">
-                    <p class="text">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-prime-mobile.webp    1x,
+                        ./images/project-prime-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-mobile.jpg    1x,
+                        ./images/project-prime-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-desktop.webp    1x,
+                        ./images/project-prime-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-desktop.jpg    1x,
+                        ./images/project-prime-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-tablet.webp    1x,
+                        ./images/project-prime-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-prime-tablet.jpg    1x,
+                        ./images/project-prime-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/project-prime-mobile@2x.jpg"
+                      alt="Навушники"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Видання Limited Edition</h2>
-                  <p class="description">Дизайн</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Проєкт Prime</h2>
+                  <p class="works__label">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/label.jpg"
-                    alt="Бірка"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-boxes-mobile.webp    1x,
+                        ./images/project-boxes-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-mobile.jpg    1x,
+                        ./images/project-boxes-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-desktop.webp    1x,
+                        ./images/project-boxes-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-desktop.jpg    1x,
+                        ./images/project-boxes-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-tablet.webp    1x,
+                        ./images/project-boxes-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-boxes-tablet.jpg    1x,
+                        ./images/project-boxes-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/project-boxes-mobile@2x.jpg"
+                      alt="Дві скриньки"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Проєкт LAB</h2>
-                  <p class="description">Маркетинг</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Проєкт Boxes</h2>
+                  <p class="works__label">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="" class="link our-work-link">
-                <div class="thumb">
-                  <img
-                    class="image"
-                    src="./images/business.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
-                  <div class="text-container">
-                    <p class="text">
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/no-borders-mobile.webp    1x,
+                        ./images/no-borders-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/no-borders-mobile.jpg    1x,
+                        ./images/no-borders-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/no-borders-desktop.webp    1x,
+                        ./images/no-borders-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/no-borders-desktop.jpg    1x,
+                        ./images/no-borders-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/no-borders-tablet.webp    1x,
+                        ./images/no-borders-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/no-borders-tablet.jpg    1x,
+                        ./images/no-borders-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/no-borders-mobile@2x.jpg"
+                      alt="Монітор"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <h2 class="title">Growing Business</h2>
-                  <p class="description">Додаток</p>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Inspiration has no Borders</h2>
+                  <p class="works__label">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/limited-edition-mobile.webp    1x,
+                        ./images/limited-edition-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/limited-edition-mobile.jpg    1x,
+                        ./images/limited-edition-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/limited-edition-desktop.webp    1x,
+                        ./images/limited-edition-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/limited-edition-desktop.jpg    1x,
+                        ./images/limited-edition-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/limited-edition-tablet.webp    1x,
+                        ./images/limited-edition-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/limited-edition-tablet.jpg    1x,
+                        ./images/limited-edition-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/limited-edition-mobile@2x.jpg"
+                      alt="Книга"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Видання Limited Edition</h2>
+                  <p class="works__label">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project-lab-mobile.webp    1x,
+                        ./images/project-lab-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-mobile.jpg    1x,
+                        ./images/project-lab-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-desktop.webp    1x,
+                        ./images/project-lab-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-desktop.jpg    1x,
+                        ./images/project-lab-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-tablet.webp    1x,
+                        ./images/project-lab-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/project-lab-tablet.jpg    1x,
+                        ./images/project-lab-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/project-lab-mobile@2x.jpg"
+                      alt="Ярлик"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Проєкт LAB</h2>
+                  <p class="works__label">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a href="#" class="works__link" rel="noopener noreferrer">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/growing-business-mobile.webp    1x,
+                        ./images/growing-business-mobile@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-mobile.jpg    1x,
+                        ./images/growing-business-mobile@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-desktop.webp    1x,
+                        ./images/growing-business-desktop@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-desktop.jpg    1x,
+                        ./images/growing-business-desktop@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-tablet.webp    1x,
+                        ./images/growing-business-tablet@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/growing-business-tablet.jpg    1x,
+                        ./images/growing-business-tablet@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="works__image"
+                      src="./images/growing-business-mobile@2x.jpg"
+                      alt="Ноутбук"
+                    />
+                  </picture>
+                  <div class="works__container">
+                    <p class="works__description">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="works__content">
+                  <h2 class="works__subtitle">Growing Business</h2>
+                  <p class="works__label">Додаток</p>
                 </div>
               </a>
             </li>
