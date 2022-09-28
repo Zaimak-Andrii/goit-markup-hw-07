@@ -1,0 +1,305 @@
+.feedback {
+}
+
+// Form
+.form {
+}
+
+// Title
+.form__title {
+  margin-bottom: spacing(1.2);
+
+  font-weight: 700;
+  @include setFont(20, 30);
+
+  text-align: center;
+  color: getColor(mine-shaft);
+}
+
+// Input
+.form__label {
+  display: block;
+  margin-bottom: spacing(0.4);
+
+  @include setFont(12, 14);
+  letter-spacing: 0.01em;
+}
+
+.form__input-group {
+  position: relative;
+
+  margin-bottom: spacing(1);
+
+  color: getColor(mine-shaft);
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+
+  @include setFont(12, 14);
+  letter-spacing: 0.01em;
+
+  border: 1px solid getColor(mine-shaft, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  @include setTransition(border-color);
+
+  &:focus-within {
+    border-color: getColor(dodger-blue);
+  }
+}
+
+.form__input-icon {
+  @extend %icon;
+
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+  @include setTransition(color);
+
+  :focus-within + & {
+    color: getColor(dodger-blue);
+  }
+}
+
+// Area
+.form__area {
+  width: 100%;
+  height: 120px;
+  margin-bottom: spacing(2);
+  padding: 12px 16px;
+  resize: none;
+
+  @include setFont(12, 14);
+  letter-spacing: 0.01em;
+
+  border: 1px solid getColor(mine-shaft, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  @include setTransition(border-color);
+
+  &:focus-within {
+    border-color: getColor(dodger-blue);
+  }
+}
+
+// Checkbox
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: spacing(3);
+}
+
+.form__checkbox-input {
+  @include visibilityHidden();
+}
+
+.form__checkbox-container {
+  display: block;
+  position: relative;
+
+  min-width: 16px;
+  min-height: 15px;
+
+  color: transparent;
+
+  border-radius: 3px;
+  border: 2px solid getColor(mine-shaft);
+
+  @include setTransition(border-color);
+
+  :checked + & {
+    border-color: transparent;
+    color: getColor(dodger-blue);
+  }
+}
+
+.form__checkbox-icon {
+  @extend %icon;
+  position: absolute;
+
+  left: -2px;
+  top: -2px;
+
+  @include setTransition(color);
+}
+
+.form__checkbox-label {
+  margin-left: spacing(0.8);
+
+  @include breakpoint(false, desktop) {
+    @include setFont(12, 14);
+  }
+
+  @include breakpoint(desktop) {
+    @include setFont(14, 24);
+  }
+}
+
+.form__checkbox-link {
+  @extend %link;
+
+  text-decoration-line: underline;
+
+  color: getColor(dodger-blue);
+}
+
+// Button
+.form__button {
+  margin: 0 auto;
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.feedback > .form-group-input,
+.feedback > .form-group-area {
+  position: relative;
+}
+
+.feedback > .form-group-input {
+  margin-bottom: 10px;
+}
+
+.feedback > .form-group-area {
+  margin-bottom: 20px;
+}
+
+.form-group-input {
+  color: var(--black-color);
+}
+
+.form-label {
+  display: inline-block;
+
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-group-input .form-input {
+  width: 100%;
+  min-height: 40px;
+  padding-left: 42px;
+}
+
+.form-group-area .form-area {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  resize: none;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+.form-group-input .form-input,
+.form-group-area .form-area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--black-color);
+
+  outline: none;
+
+  transition: border-color var(--animation-duration) var(--animation-function);
+}
+
+.form-group-area .form-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-group-input .form-input:focus-within,
+.form-group-area .form-area:focus-within {
+  border: 1px solid var(--primary-color);
+}
+
+.form-group-input .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  transition: color var(--animation-duration) var(--animation-function);
+}
+
+.form-group-input .form-input:focus + .icon {
+  color: var(--primary-color);
+}
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.checkbox .form-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox .label-text {
+  margin-left: 7px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
+.checkbox .link {
+  text-decoration-line: underline;
+
+  color: var(--primary-color);
+}
+
+.form-checkbox {
+  position: relative;
+
+  width: 16px;
+  height: 15px;
+
+  border-radius: 3px;
+  border: 2px solid var(--title-text-color);
+
+  transition: border var(--animation-duration) var(--animation-function);
+}
+
+.form-checkbox .icon {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+
+  display: block;
+
+  width: 16px;
+  height: 15px;
+
+  fill: var(--primary-color);
+
+  opacity: 0;
+
+  transition: opacity var(--animation-duration) var(--animation-function);
+}
+
+.checkbox .form-input:checked + .form-checkbox {
+  border-color: transparent;
+}
+
+.checkbox .form-input:checked + .form-checkbox > .icon {
+  opacity: 1;
+}

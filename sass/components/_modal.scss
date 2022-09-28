@@ -1,0 +1,80 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+
+  background: getColor(black, 0.2);
+
+  opacity: 1;
+  @include setTransition(opacity);
+
+  &--is-hidden {
+    pointer-events: none;
+
+    opacity: 0;
+
+    & > .modal {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  padding: spacing(4);
+
+  border-radius: 4px;
+  background: getColor(white);
+  box-shadow: 0px 1px 3px getColor(black, 0.12), 0px 1px 1px getColor(black, 0.14),
+    0px 2px 1px getColor(black, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  @include setTransition(transform);
+
+  @include breakpoint(false, tablet) {
+    width: calc(100vw - 30px);
+  }
+
+  @include breakpoint(tablet, desktop) {
+    width: 450px;
+  }
+}
+
+// Button
+.modal__button {
+  @extend %button;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  color: getColor(black);
+
+  border: 1px solid getColor(black, 0.1);
+  background-color: getColor(white);
+
+  &:hover,
+  &:focus {
+    color: getColor(dodger-blue);
+  }
+}
+
+.modal__button-icon {
+  @extend %icon;
+
+  width: 18px;
+  height: 18px;
+
+  @include setTransition(color);
+}

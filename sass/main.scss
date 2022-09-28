@@ -7,6 +7,7 @@
 @import './components/section';
 @import './components/button';
 @import './components/socials';
+@import './components/modal';
 @import './components/header/main';
 @import './components/main/main';
 @import './components/footer/main';
@@ -17,4 +18,8 @@ body {
   color: getColor(boulder);
 
   background-color: getColor(white);
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
